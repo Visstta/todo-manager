@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Редактирование — Фокус{% endblock %}
+{% block content %}
+<section class="panel edit-panel"><a href="{{ url_for('tasks.index') }}">← Назад к списку</a><h1>Изменить задачу</h1>
+<form method="post" class="task-form">
+  <label class="wide">Название<input name="title" maxlength="120" value="{{ task.title }}" required></label>
+  <label>Приоритет<select name="priority">{% for value, label in [('low','Низкий'),('medium','Средний'),('high','Высокий')] %}<option value="{{ value }}" {% if task.priority == value %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label>
+  <label>Срок<input name="due_date" type="date" value="{{ task.due_date or '' }}"></label>
+  <label class="wide">Описание<textarea name="description" maxlength="1000">{{ task.description }}</textarea></label>
+  <button class="primary" type="submit">Сохранить изменения</button>
+</form></section>
+{% endblock %}
+

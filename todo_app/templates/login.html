@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Вход — Фокус{% endblock %}
+{% block content %}
+<section class="auth-panel panel">
+  <p class="eyebrow">С ВОЗВРАЩЕНИЕМ</p>
+  <h1>Вход в аккаунт</h1>
+  <p>Ваши задачи доступны только после входа.</p>
+  <form method="post" class="auth-form">
+    <label>Имя пользователя<input name="username" minlength="3" maxlength="40" autocomplete="username" required autofocus></label>
+    <label>Пароль<input name="password" type="password" minlength="8" autocomplete="current-password" required></label>
+    <button class="primary" type="submit">Войти</button>
+  </form>
+  <p class="auth-link">Нет аккаунта? <a href="{{ url_for('auth.register') }}">Зарегистрироваться</a></p>
+</section>
+{% endblock %}

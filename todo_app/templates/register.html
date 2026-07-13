@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Регистрация — Фокус{% endblock %}
+{% block content %}
+<section class="auth-panel panel">
+  <p class="eyebrow">НОВЫЙ АККАУНТ</p>
+  <h1>Создайте свой список</h1>
+  <p>У каждого пользователя будет отдельное пространство задач.</p>
+  <form method="post" class="auth-form">
+    <label>Имя пользователя<input name="username" minlength="3" maxlength="40" pattern="[A-Za-zА-Яа-яЁё0-9_]+" autocomplete="username" required autofocus></label>
+    <label>Пароль<input name="password" type="password" minlength="8" autocomplete="new-password" required></label>
+    <label>Повторите пароль<input name="confirm" type="password" minlength="8" autocomplete="new-password" required></label>
+    <button class="primary" type="submit">Создать аккаунт</button>
+  </form>
+  <p class="auth-link">Уже зарегистрированы? <a href="{{ url_for('auth.login') }}">Войти</a></p>
+</section>
+{% endblock %}
