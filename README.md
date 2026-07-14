@@ -63,11 +63,8 @@ python run.py
 
 ## Репозиторий
 
-```powershell
-git init
-git add .
-git commit -m "Готовый менеджер списка дел"
-git branch -M main
-git remote add origin АДРЕС_ВАШЕГО_РЕПОЗИТОРИЯ
-git push -u origin main
-```
+Исходный код проекта размещён в публичном репозитории GitHub:
+
+https://github.com/Visstta/todo-manager
+
+Основная ветка репозитория — `main`.
