@@ -71,7 +71,3 @@ git branch -M main
 git remote add origin АДРЕС_ВАШЕГО_РЕПОЗИТОРИЯ
 git push -u origin main
 ```
-
-## Автор
-
-Укажите здесь ФИО, группу и год.
